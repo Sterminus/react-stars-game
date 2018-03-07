@@ -4,6 +4,11 @@ import _ from 'lodash';
 const Numbers = (props) => {
     const numberClassName=(number) => {
             let className = '';
+            
+            if(props.usedNumbers.indexOf(number) >= 0)
+            {
+                className = 'used';
+            }
 
             if(props.selectedNumbers.indexOf(number) >= 0)
             {
